@@ -1,0 +1,107 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<html>
+    <head>
+        <title> Website for a Phone</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="main">
+        <nav>
+            <div class ="logo">
+                <img src= "images/huawei-logo.jpg">
+            </div>
+            <div class ="nav-links">
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Huawei-P20.html">Huawei P20</a></li>
+                    <li><a href="Huawei-nova-7i.html">Huawei Nova 7i</a></li>
+                    <li><a href="Huawei-mate-20-pro.html">Huawei Mate 20 Pro</a></li>
+                 </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/huawei-mate20-pro-1.jpg" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/camera.png">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>40MP, Ultrawide</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/processor.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+
+                </div>
+                <div class="feature three">
+                    <img src="images/display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.39", OLED, HDR10</p>
+                    </div>
+                    
+                </div>
+                <div class="feature four">
+                    <img src="images/battery.png">
+                    <div>
+                        <h1>Battery Life</h1>
+                        <p>Li-Po 4200 mAh, 540Hrs Standby</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtw = document.getElementById("downBtw");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform= rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform= rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+
+
+</body>
+
+
+
+
+</html>
